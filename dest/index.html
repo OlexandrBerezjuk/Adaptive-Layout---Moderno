@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="ie=edge"/><title>Document</title><link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"/><link href="https://fonts.googleapis.com/css?family=Lora|Montserrat" rel="stylesheet"/><link rel="stylesheet" href="style/mainik.css"/><link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script></head><style>@keyframes menu {
+    from {
+
+}
+
+
+    to {
+        right: 0;
+    }   
+}
+
+@keyframes menuRev {
+    from {
+        right: 0;
+    }
+
+    to {
+
+    }
+}
+.no1 {
+    animation-name: menu;
+}
+
+.no2 {
+    animation-name: menuRev;
+}   </style><body><div id="homes" class="parent"><div class="head"><a href="#"><img src="img/logo.png" id="logo"/></a><div class="bars">   <img src="img/1.png" id="btn1"/></div></div><div class="block"><div class="block_Text"><div class="Name"> <p class="name_Text"> MODERNO</p></div><div class="Middle">   <p class="Middle_Text">   Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p><p class="Middle_Text2">Curabitur eu velit nulla. </p></div><button class="Text_Button"> Get in Touch        </button></div></div></div><script>$('.Middle_Text').waypoint(function(){this.element.classList.add('addressAppearAnimation')}, {offset:"95%"});   
+$('.Middle_Text2').waypoint(function(){this.element.classList.add('addressAppearAnimation')}, {offset:"95%"});
+
+ //This code is aimed to hide side menu bar using keyframes animation above
+ //Also this code is aimed to hide side menu bar when we click on page outside menu bar
+ //Description of the code with adding classes no1 and no2 2.02.50-2.05.40 Lesson50
+ //This code animates hiding of side-menu-bar
+
+var barsBurger=document.querySelector('.bars');
+barsBurger.addEventListener('click', function(){
+   barsBurger.style.opacity=0;
+   //- homes.addEventListener('click', f_hide)
+   var services=document.getElementById("services-container");
+   services.addEventListener('click', f_hide)
+   connect.addEventListener('click', f_hide)
+   content.addEventListener('click', f_hide)
+});
+function f_hide(){
+   menuAnimate.classList.add('no2');
+   menuAnimate.classList.remove('no1');
+   barsBurger.style.opacity=1;
+}</script><div id="services-container"><div class="services-main-block"><div style="height: 320px" class="services-block"><div style="background-color: #fa694e; border: none;" class="services-circle"><img src="img/4.png"/></div><h2 class="services-head_txt">we are creative</h2><p class="services-info_txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus suscipit fugit doloremque quam nesciunt eveniet maiores reprehenderit?</p></div><div style="height: 273px" class="services-block"><div class="services-circle"><img src="img/2.png"/></div><h3 class="services-head_txt">we have skills</h3><p class="services-info_txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p></div><div class="services-block"><div class="services-circle"><img src="img/3.png"/></div><h3 class="services-head_txt">we love to help</h3><p class="services-info_txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus suscipit fugit.</p></div></div></div><script>$('.services-info_txt').waypoint(function(){this.element.classList.add('addressAppearAnimation')}, {offset:"95%"});</script><div id="content" class="content"><div class="success"><p class="success-head">Success Stories</p><p class="success-text">We do awesome work, check some of success stories so far</p></div><div class="project-form"><div class="project-image"></div><div class="project-view"><i class="fas fa-times"></i><p class="project-view_head">Lorem Ipsum Project</p><p class="project-view_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since 
+the 1500s, when an unknown printer took a galley of type and scrambled it 
+to make a type specimen book.</p><button class="view-button">View Project</button></div></div><div class="pictures-block"><div class="pictures-block_element no1"><div class="red_plus-block"><p class="white_plus">+</p></div></div><div class="pictures-block_element"><div class="red_plus-block"><p class="white_plus">+</p></div></div><div class="pictures-block_element"><div class="red_plus-block"><p class="white_plus">+</p></div></div><div class="pictures-block_element"><div class="red_plus-block"><p class="white_plus">+</p></div></div><div class="pictures-block_element"><div class="red_plus-block"><p class="white_plus">+</p></div></div><div class="pictures-block_element"><div class="red_plus-block"><p class="white_plus">+</p></div></div></div></div><script>$('.success-head').waypoint(function(){this.element.classList.add('addressAppearAnimation');}, {offset:"95%"});
+	</script>
+<div id="connect" class="contacts"><div class="contactsHead"><strong>Get In Touch</strong><br/><p>We are communicative and social</p></div><div id="contactsMap"><script>function initMap() {var uluru = {lat: 50.4449024, lng: 30.5222704};
+var map = new google.maps.Map(document.getElementById('contactsMap'), {zoom: 17,center: uluru});
+var marker = new google.maps.Marker({position: uluru,map: map});}</script><script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ-kbdVBqC5LuNC3BxBFM3gFkI2eB3_vY&amp;callback=initMap"></script></div><div class="contactsBlock"><div class="contactsBlockSign"><form><div class="contactsBlockSignForm"><input type="text" placeholder="   Your name" class="contactsBlockSignFormPole1"/><input type="email" placeholder="   Your mail" class="contactsBlockSignFormPole1"/><input type="text" placeholder="   Subject" class="contactsBlockSignFormPole2"/><textarea type="text" placeholder="   Type message here ... " class="contactsBlockSignFormPole3"></textarea><button class="contactsBlockSignFormBtn">SEND</button></div></form></div><div class="contactsBlockInformation"><div class="contactsBlockInformationAddress"><p class="contactsBlockInformationTitle"><strong>Our Address</strong></p><p class="contactsBlockInformationText">4896 Desert Broom Court
+Newark, NJ 07102
+United States</p></div><div class="contactsBlockInformationAddress"><p class="contactsBlockInformationTitle"><strong>Email</strong></p><p class="contactsBlockInformationText">modernomail@mail.com</p></div><div class="contactsBlockInformationAddress"><p class="contactsBlockInformationTitle"><strong>Phone</strong></p><p class="contactsBlockInformationText">+00 123-456-78900</p></div></div></div></div><script>$('.contactsHead').waypoint(function(){
+	this.element.classList.add('animate_1200-992');
+	}, {offset:"95%"}
+);
+$('.contactsBlockInformationAddress').waypoint(function(){
+	this.element.classList.add('addressAppearAnimation');
+	}, {offset:"95%"}
+);</script><div class="golova"> <div class="content_Flex"><p class="Copy">Copyright © 2014 Moderno, All Rights Reserved</p><div class="icons"><div class="shape"><a href="#"><i class="fab fa-facebook-f"></i></a></div><div class="shape"><a href="#"><i class="fab fa-twitter"></i></a></div></div></div></div><div id="menuAnimate" class="menu"><div class="container-menu"><div id="btn" class="hrest">x</div><div class="block-menu"><img src="img/path.png" alt="menu" class="img2"/><h1>Menu</h1></div><div class="block2-menu"><ul><li><a href="#" id="home" class="home">Home</a></li><li><a href="#" id="services">Services</a></li><li><a href="#" id="stories">stories</a></li><li><a href="#" id="contact">contact</a></li></ul></div><div class="block3-menu"><div class="shape"><i class="fab fa-facebook-f"></i></div><div class="shape"><i class="fab fa-twitter"></i></div></div></div></div></body><script>// ********************************************************************************************    
+//Task 1.05.00-1.10.10L50, 1.12.45-1.14.45L50
+
+//This code is aimed to hide side menu bar.
+//Because .menu width has width 30% from body,
+//we need to be sure that it is fully hidden when been closed
+//until it has been called by menu burger
+
+window.addEventListener('load', f_hideMenu)
+
+window.addEventListener('resize', f_hideMenu)
+        
+function f_hideMenu() {
+    menuAnimate.style.right= '-' +menuAnimate.clientWidth+'px';
+    menuAnimate.style.opacity=1;
+    
+    //- **********************************************************************************************
+    //- this code allows to transfer blocks inside .head block when body width is more than 1920px
+    //- **********************************************************************************************
+    if (document.body.clientWidth>5700) {
+        var t = (40*document.body.clientWidth)/100;
+        var h = document.querySelector('.head');
+        h.style.paddingLeft=t+'px';
+        h.style.paddingRight=t+'px';
+        var Mid = document.querySelector(".block_Text");
+        Mid.style.textAlign = "center";
+    }
+
+    if (document.body.clientWidth>1920 && document.body.clientWidth<5700) {
+        var t = (30*document.body.clientWidth)/100;
+        var h = document.querySelector('.head');
+        h.style.paddingLeft=t+'px';
+        h.style.paddingRight=t+'px';
+    }
+    
+    if (document.body.clientWidth<1920) {
+        var h = document.querySelector('.head');
+        h.style.paddingLeft="inherit";
+        h.style.paddingRight="inherit";
+    }
+    //- **********************************************************************************************
+}
+
+//This code is aimed to hide side menu bar using keyframes animation above
+//Description of the code with adding classes no1 and no2 2.02.50-2.05.40 Lesson50
+//This code animates hiding of side-menu-bar
+
+
+btn.addEventListener('click', function(){
+    menuAnimate.classList.add('no2')
+    menuAnimate.classList.remove('no1')
+    
+    
+})
+btn1.addEventListener('click', function(){
+    menuAnimate.classList.add('no1')
+    menuAnimate.classList.remove('no2')
+})
+
+
+
+
+// ********************************************************************************************
+
+
+//These jquery codes above are described in 49.40, 1.46.15-1.54.00 Lesson50)
+//this allows you to smoothly move around the page
+
+$("#home").click(function(){
+    $('html, body').animate({
+        scrollTop: $("#homes").offset().top
+    }, 500);
+});
+$("#services").click(function(){
+    $('html, body').animate({
+        scrollTop: $("#services-container").offset().top
+    }, 500);
+});
+$("#stories").click(function(){
+    $('html, body').animate({
+        scrollTop: $("#content").offset().top
+    }, 500);
+});
+$("#contact").click(function(){
+    $('html, body').animate({
+        scrollTop: $("#connect").offset().top
+    }, 500);
+});
+
+
+
+//This code is aimed to display back burger-menu when we close side menu-ber by clicking close-button
+
+var btnHrest=document.getElementById('btn');
+btnHrest.addEventListener('click', function() {
+    barsBurger.style.opacity=1;
+})
+
+
+//1.05.00-1.10.10 Lesson50 This code is for fixed top menu-bar      
+//В записи сказано, что эта шапка будет ездить при скроле на мобильном и десктопном приложениях
+//обычно в таких случаях для мобильных делают свою шапку которая скролится
+//а для десктопных своя, они на медизапросах с пом. display: none меняются местами
+
+window.addEventListener('scroll', function(e){
+    scrollTopFix=function(){
+        if ('scrollingElement' in document)
+            {return document.scrollingElement}
+        if (navigator.userAgent.indexOf('WebKit')!=-1)
+            {return document.body}
+        return document.documentElement
+    }
+        var distTop = scrollTopFix().scrollTop;
+        var barh = document.querySelector('.head');
+        var blockG = document.querySelector('.block');
+        if(distTop > 100) {
+            barh.classList.add('fixed');
+            blockG.style.marginTop = 275 + 'px';        //этот код компенсирует блоку потерянные 100px (закрепленная верхняя меню) из-за которой контент блока .block смещается вверх и становится нечитаемым
+        }
+        if(distTop<100){
+            if (distTop==0){
+                barh.classList.remove('fixed');
+                blockG.style.marginTop = 0 + 'px';
+            }
+        }
+    f_noScroll()
+});
+
+//Эта функция позволяет скрывать правую менюшку когда мы скролимся
+//This function allows to hide side-menu-bar when scrolling
+
+function f_noScroll() {
+    var m = document.getElementById('menuAnimate')
+    m.removeEventListener('scroll',f_noScroll)
+    var temp = m.classList;
+    var temp1 = Array.from(temp)
+    //- console.log(temp1)
+    if (temp1.indexOf("no1") != -1) {
+        if (document.body.clientWidth<700){
+            m.classList.add('no2')
+            m.classList.remove('no1')
+            barsBurger.style.opacity=1; 
+        }
+    } 
+}
+
+
+
+
+
+
+          </script></html>
