@@ -1,0 +1,38 @@
+div.parent#homes
+    div.head
+        a(href="#")
+            img(src="img/logo.png" id="logo")
+        div.bars    
+            img(src="img/1.png" id="btn1")
+    div.block
+        div.block_Text
+            div.Name  
+                p(class='name_Text')  MODERNO
+            div.Middle    
+                p(class='Middle_Text')    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                p(class='Middle_Text2') Curabitur eu velit nulla. 
+            button(class='Text_Button')  Get in Touch        
+script.
+ $('.Middle_Text').waypoint(function(){this.element.classList.add('addressAppearAnimation')}, {offset:"95%"});   
+ $('.Middle_Text2').waypoint(function(){this.element.classList.add('addressAppearAnimation')}, {offset:"95%"});
+ 
+  //This code is aimed to hide side menu bar using keyframes animation above
+  //Also this code is aimed to hide side menu bar when we click on page outside menu bar
+  //Description of the code with adding classes no1 and no2 2.02.50-2.05.40 Lesson50
+  //This code animates hiding of side-menu-bar
+
+ var barsBurger=document.querySelector('.bars');
+ barsBurger.addEventListener('click', function(){
+    barsBurger.style.opacity=0;
+    //- homes.addEventListener('click', f_hide)
+    var services=document.getElementById("services-container");
+    services.addEventListener('click', f_hide)
+    connect.addEventListener('click', f_hide)
+    content.addEventListener('click', f_hide)
+ });
+ function f_hide(){
+    menuAnimate.classList.add('no2');
+    menuAnimate.classList.remove('no1');
+    barsBurger.style.opacity=1;
+ }
+ 
